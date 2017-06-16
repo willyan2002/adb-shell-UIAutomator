@@ -11,6 +11,7 @@ python 解析xml遍历查找，如找到元素则计算其所在区域中心坐�
 
 代码及注释
 【代码模拟在Android手机 设置页面中查找某个元素，如 Reset】
+
 #-*- coding:utf-8 -*-
 '''
 Created on 2017年6月14日
