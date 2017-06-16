@@ -14,14 +14,13 @@ python 解析xml遍历查找，如找到元素则计算其所在区域中心坐�
 
 #-*- coding:utf-8 -*-
 
-import xml.etree.ElementTree as ET\n
-import os, re, time
+import xml.etree.ElementTree as ET, os, re, time
 
+UIDum类，实现dump过程
+执行adb shell uiautomator dump指令，将生成的xml文件下载到本地并从手机内存中清除
+存放取回本地的xml文件size值，用于判定dump及取回本地动作是否成功
 class UIDump():
-      '''
-      执行adb shell uiautomator dump指令，将生成的xml文件下载到本地并从手机内存中清除
-      '''
-    #存放取回本地的xml文件size值，用于判定dump及取回本地动作是否成功
+      
     size= [0,]
     def __init__(self):
         #定义xml文件本地存放路径
@@ -51,11 +50,9 @@ class UIDump():
         #下翻屏显,当前屏幕显示区域找不到Element时调用，翻屏幅度尽量保守，不宜超过2/3屏
         os.popen('adb shell input swipe 800 1000 800 400')
        
-       
+遍历xml树，查找元素所在区域的Bouds并计算出其近似中心点坐标       
 class Element(object):
-    '''
-          遍历xml树，查找元素所在区域的Bouds并计算出其近似中心点坐标
-    '''
+   
     def __init__(self):
         '''
         dump文件本地存储目录，bounds是数字所以正则匹配数字模式
