@@ -14,7 +14,7 @@ python 解析xml遍历查找，如找到元素则计算其所在区域中心坐�
 
 #-*- coding:utf-8 -*-
 
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET\n
 import os, re, time
 
 class UIDump():
