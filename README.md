@@ -13,12 +13,12 @@ python 解析xml遍历查找，如找到元素则计算其所在区域中心坐�
 
 
 代码及注释
-【代码模拟在Android手机 设置页面中查找某个元素，如 Reset】，代码及注释见xmlParse.py
+模拟在Android手机 设置页面中查找某个元素如 Reset，代码及注释见xmlParse.py
 
 
         
- 打印输出与手机反应
-  手机自动翻屏并停止在“Reset”元素显示的位置
+打印输出与手机反应
+手机自动翻屏并停止在“Reset”元素显示的位置
      
       The bounds of the element Reset is:
       ['228', '1820', '416', '1922']
