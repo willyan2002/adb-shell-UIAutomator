@@ -43,9 +43,9 @@ class Element(object):
     '''
     def __init__(self):
         '''
-        构造初始环境，dump文件本地存储目录，匹配数字模式
+        构造初始环境，dump文件本地存储目录，元素坐标为数字故正则提取节点属性中的数字值
         '''
-        #self.path = r'e:\\TBD\\newjob\\'
+        self.path = r'e:\\TBD\\newjob\\'
         self.pattern = re.compile(r"\d+")
     
     def elementLocate(self, attrib, name, xmlTreeIter):
